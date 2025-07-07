@@ -22,27 +22,30 @@ httpresponder2025/
 - Node.js 20.
 - GitHub Actions (CI/CD pipeline).
 - Azure CLI
+
 ``` 
 
-##📂 Setup Instructions
+📂 Setup Instructions
 ✅ Prerequisites
 	•	Azure account with an existing Function App.
 	•	Azure Functions Core Tools installed.
 	•	Node.js v20 installed.
 🔧 Run Locally
 	1	Start the function locally: ```bash func start
+
 ```
 
-##🚀 CI/CD Deployment
+🚀 CI/CD Deployment
 The GitHub Actions workflow automatically deploys the Azure Function whenever you push to the main branch.
 Workflow Steps:
 	•	Runs on push to the main branch.
 	•	Builds the project using Node.js 18.
 	•	Authenticates to Azure using OIDC (Managed Identity).
 	•	Deploys the Azure Function to the configured Function App.
+
 ```
 
-## 🔑 API Key Security
+🔑 API Key Security
 The function is secured using API keys.
 Access Format:
 ``` text
@@ -51,28 +54,33 @@ https://<YOUR_FUNCTION_APP_NAME>.azurewebsites.net/api/<YOUR_FUNCTION_NAME>?code
 Get API Key:
 	1	Go to Azure Portal > Function App > Functions > Your Function > Function Keys.
 	2	Copy the default or custom key.
+
 ``` 
+
 📈 Monitoring
 	•	Integrated with Application Insights for live metrics, request tracking, and failure alerts.
+
 ``` 
-##📚 Useful Commands
+
+📚 Useful Commands
 ``` bash
-# Run locally
+Run locally
 func start
 
-# Manual deployment (if needed)
+Manual deployment (if needed)
 func azure functionapp publish <YOUR_FUNCTION_APP_NAME> --javascript
 
-# Install dependencies
+Install dependencies
 npm install
+
 ``` 
-##✨ Features
+✨ Features
 	•	Automated deployments via GitHub Actions.
 	•	Simple setup with Azure CLI.
 	•	API key security to restrict function access.
 	•	Easy local development and testing.
 ```
-##🙌 Contribution
+🙌 Contribution
 If you'd like to contribute, please fork the repository, create a feature branch, and open a pull request.
 ```
 📄 License
